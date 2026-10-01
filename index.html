@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CláusulaGovTech</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="requirements.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar-content">
+      <a href="#" class="brand" id="brand-home">
+        <span class="brand-mark">CG</span>
+
+        <span class="brand-text">
+          <strong>CláusulaGovTech</strong>
+          <small>Apoio à análise de contratações públicas de tecnologia</small>
+        </span>
+      </a>
+
+      <span class="prototype-label">Protótipo acadêmico</span>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- TELA INICIAL -->
+    <section id="home-screen" class="screen active">
+
+      <div class="hero">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            Contratações públicas de TIC · SISP
+          </p>
+
+          <h1>
+            Identifique matérias contratuais relevantes a partir das características da contratação.
+          </h1>
+
+          <p class="hero-description">
+            O CláusulaGovTech organiza requisitos jurídicos e institucionais aplicáveis
+            às contratações de soluções de Tecnologia da Informação e Comunicação,
+            com indicação da fonte, do âmbito de aplicação e da condição que determinou
+            cada resultado.
+          </p>
+
+          <div class="hero-actions">
+            <button id="start-analysis" class="btn btn-primary">
+              Nova análise
+            </button>
+
+            <button id="open-methodology" class="btn btn-secondary">
+              Como funciona
+            </button>
+          </div>
+
+        </div>
+
+
+        <aside class="scope-card">
+
+          <span class="scope-label">Escopo da primeira versão</span>
+
+          <h2>SISP · Poder Executivo federal</h2>
+
+          <p>
+            Contratações de soluções de TIC compreendidas no âmbito de aplicação
+            da IN SGD/ME nº 94/2022.
+          </p>
+
+          <div class="scope-divider"></div>
+
+          <p class="scope-note">
+            Fontes específicas serão consideradas apenas quando as características
+            da contratação estiverem compreendidas em seu respectivo âmbito de aplicação.
+          </p>
+
+        </aside>
+
+      </div>
+
+
+      <section class="principles-section">
+
+        <div class="section-heading">
+          <span class="section-number">01</span>
+
+          <div>
+            <p class="eyebrow">Estrutura da análise</p>
+            <h2>Do fato informado ao fundamento apresentado</h2>
+          </div>
+        </div>
+
+
+        <div class="principles-grid">
+
+          <article class="principle-card">
+            <span class="principle-number">1</span>
+            <h3>Características da contratação</h3>
+            <p>
+              O usuário informa dados objetivos sobre a solução tecnológica e
+              sobre a forma prevista para sua contratação.
+            </p>
+          </article>
+
+          <article class="principle-card">
+            <span class="principle-number">2</span>
+            <h3>Regras determinísticas</h3>
+            <p>
+              As respostas ativam regras previamente definidas e vinculadas
+              à matriz de requisitos do protótipo.
+            </p>
+          </article>
+
+          <article class="principle-card">
+            <span class="principle-number">3</span>
+            <h3>Resultado rastreável</h3>
+            <p>
+              Cada matéria apresentada permanece associada à condição de incidência
+              e à fonte que fundamenta sua inclusão.
+            </p>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <section class="notice-card">
+
+        <div class="notice-icon">!</div>
+
+        <div>
+          <h2>Revisão humana necessária</h2>
+
+          <p>
+            O resultado identifica matérias contratuais a partir do escopo normativo
+            incorporado ao protótipo. Não constitui parecer jurídico, certificação de
+            conformidade ou declaração de regularidade da contratação. A revisão humana
+            permanece necessária.
+          </p>
+        </div>
+
+      </section>
+
+    </section>
+
+
+    <!-- COMO FUNCIONA -->
+    <section id="methodology-screen" class="screen">
+
+      <button class="back-button" data-back="home">
+        ← Voltar
+      </button>
+
+      <div class="content-container">
+
+        <p class="eyebrow">Metodologia</p>
+
+        <h1>Como funciona o CláusulaGovTech</h1>
+
+        <p class="lead">
+          O protótipo utiliza regras determinísticas construídas a partir de uma
+          matriz que relaciona fontes, condições de incidência, perguntas factuais
+          e resultados.
+        </p>
+
+
+        <div class="trace-example">
+
+          <span>Resposta do usuário</span>
+          <span class="trace-arrow">→</span>
+
+          <span>Regra acionada</span>
+          <span class="trace-arrow">→</span>
+
+          <span>Requisito</span>
+          <span class="trace-arrow">→</span>
+
+          <span>Fonte</span>
+
+        </div>
+
+
+        <h2>Limites da ferramenta</h2>
+
+        <p>
+          O CláusulaGovTech auxilia na identificação e organização de matérias
+          relevantes. A ferramenta não decide sobre validade jurídica, escolha
+          do fornecedor, vantajosidade econômica ou regularidade integral da contratação.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUESTIONÁRIO -->
+    <section id="analysis-screen" class="screen">
+
+      <div class="analysis-header">
+
+        <button class="back-button" data-back="home">
+          ← Voltar ao início
+        </button>
+
+        <div class="analysis-progress">
+          <span id="progress-label">Etapa 1</span>
+
+          <div class="progress-track">
+            <div id="progress-bar"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="analysis-layout">
+
+        <aside class="analysis-sidebar">
+
+          <p class="eyebrow">Nova análise</p>
+
+          <h2>Características da contratação</h2>
+
+          <p>
+            Responda apenas com base nas características conhecidas do caso.
+            As perguntas seguintes poderão mudar conforme suas respostas.
+          </p>
+
+          <div class="sidebar-status">
+            <span class="status-dot"></span>
+            Regras locais e determinísticas
+          </div>
+
+        </aside>
+
+
+        <section class="question-panel">
+
+          <div id="question-container">
+            <!-- As perguntas serão inseridas pelo JavaScript -->
+          </div>
+
+          <div class="question-actions">
+
+            <button id="previous-question" class="btn btn-secondary">
+              Anterior
+            </button>
+
+            <button id="next-question" class="btn btn-primary">
+              Continuar
+            </button>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+
+    <!-- RESULTADOS -->
+    <section id="results-screen" class="screen">
+
+      <div class="results-header">
+
+        <div>
+          <p class="eyebrow">Resultado da análise</p>
+          <h1>Matérias que demandam exame</h1>
+
+          <p>
+            Os resultados abaixo decorrem das respostas fornecidas e das regras
+            registradas na versão atual da matriz.
+          </p>
+        </div>
+
+        <button id="new-analysis" class="btn btn-secondary">
+          Nova análise
+        </button>
+
+      </div>
+<section id="analysis-summary" class="analysis-summary">
+  <!-- O resumo será inserido pelo JavaScript -->
+</section>
+
+      <div class="results-layout">
+
+        <section id="results-container" class="results-list">
+          <!-- Os requisitos serão inseridos pelo JavaScript -->
+        </section>
+
+
+        <aside class="trace-panel">
+
+          <p class="eyebrow">Rastro da Análise</p>
+
+          <h2>Como este resultado foi produzido?</h2>
+
+          <p>
+            Cada indicação pode ser reconstruída a partir da resposta fornecida,
+            da regra acionada e da fonte correspondente.
+          </p>
+
+          <button id="open-trace" class="btn btn-secondary btn-full">
+            Ver rastro completo
+          </button>
+
+        </aside>
+
+      </div>
+
+
+      <div class="results-actions">
+
+        <button id="edit-answers" class="btn btn-secondary">
+          Revisar respostas
+        </button>
+
+        <button id="print-results" class="btn btn-primary">
+          Imprimir / salvar em PDF
+        </button>
+
+      </div>
+
+
+      <section class="notice-card results-notice">
+
+        <div class="notice-icon">!</div>
+
+        <div>
+          <h2>Limite do resultado</h2>
+
+          <p>
+            O resultado identifica matérias contratuais a partir do escopo normativo
+            incorporado ao protótipo. Não constitui parecer jurídico, certificação de
+            conformidade ou declaração de regularidade da contratação. A revisão humana
+            permanece necessária.
+          </p>
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  <!-- JANELA DO RASTRO -->
+  <div id="trace-modal" class="modal" aria-hidden="true">
+
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="trace-title">
+
+      <div class="modal-header">
+
+        <div>
+          <p class="eyebrow">Rastreabilidade</p>
+          <h2 id="trace-title">Rastro da Análise</h2>
+        </div>
+
+        <button class="modal-close" data-close-modal aria-label="Fechar">
+          ×
+        </button>
+
+      </div>
+
+
+      <div id="trace-content" class="modal-body">
+        <!-- O rastro será inserido pelo JavaScript -->
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div>
+        <strong>CláusulaGovTech</strong>
+        <p>Protótipo acadêmico · DEF5920</p>
+      </div>
+
+      <p>
+        Ferramenta de apoio à análise. Revisão humana necessária.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
